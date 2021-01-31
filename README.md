@@ -20,7 +20,7 @@ twarc2 search blacklivesmatter > tweets.jsonl
 
 If you have academic search turned on for your account:
 
-```zsh
+```shell
 twarc2 search blacklivesmatter --all > tweets.jsonl
 ```
 
