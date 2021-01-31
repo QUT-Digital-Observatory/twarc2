@@ -9,7 +9,7 @@ different shape depending on what you ask for and how you ask for it.
 
 As with twarc the goal of twarc2 is to make it easy to continue to get the
 fullest representation of tweets and Twitter users, with the minimum amount
-of fuss, and maximum amount of reliability. Here's a sketch w of what the
+of fuss, and maximum amount of reliability. Here's a sketch of what the
 command line API could look like.
 
 ## Search
