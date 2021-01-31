@@ -1,4 +1,4 @@
-# twarc2
+# twarc2 🐍🐦💾
 
 twarc2 is a *proposed* new version of [twarc] custom made for the new
 Twitter v2 API. Twitter [substantially changed] their API in July 2020.
