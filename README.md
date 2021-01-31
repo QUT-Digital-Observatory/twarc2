@@ -26,10 +26,21 @@ The [filter] API works a bit different in v2 because you first create a set
 of rules (optionally tagged) and then you connect to the filter stream to
 retrieve all the tweets that match those rules.
 
+First you need to add a rule:
+
     twarc2 add-rule blacklivesmatter
+
+List your rules:
+
     twarc2 list-rules
-    twarc2 remove-rule 1
+
+Start collecting tweets:
+
     twarc2 filter > tweets.jsonl
+
+Delete one of your rules using an id from the the output of `list-rules`:
+
+    twarc2 remove-rule <id>
 
 ### Sample
 
@@ -42,6 +53,8 @@ retrieve all the tweets that match those rules.
 ### Following/Friends
 
     twarc2 friends jack > users.jsonl
+
+*Question: is piping to `twarc2 users` desirable?*
 
 ### Users
 
@@ -74,17 +87,20 @@ and then fetched.
 ### Stitching
 
 The big difference with the v2 API is that some information (users, media,
-etc) is not included inline and can be included as a separate [extended
-entities] object. This cuts down on duplication of information in
-a payload, but it also means your output stream will contain individual
-tweets followed by an entities object.
+etc) are not included inline in the tweets and are included as a separate
+[extended entities] objects. This cuts down on duplication of information in
+a payload (e.g. information about the same user, repeated over and over)
+but it also means your output stream will contain individual tweets followed
+by an entities object.
 
-If you would like these entities to replace the id references in tweets you
+If you would like entities to replace the id references in tweets you
 can use the `--stitch` option. Depending on your use case this could make
 downstream processing easier since it can expect each line to contain
-a tweet.
+a complete tweet.
 
     twarc2 search blacklivesmatter --stitch > tweets.jsonl
+
+The proposed behavior is that this not be the default behavior, since twarc has been used in the past to display exactly what has been retrieved from the Twitter API.
 
 [twarc]: https://github.com/docnow/twarc
 [substantially changed]: https://blog.twitter.com/developer/en_us/topics/tools/2020/introducing_new_twitter_api.html
