@@ -15,7 +15,7 @@ command line API could look like.
 ### Search
 
 ```bash
-twarc2 search blacklivesmatter > tweets.jsonl
+$ twarc2 search blacklivesmatter > tweets.jsonl
 ```
 
 If you have academic search turned on for your account:
