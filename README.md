@@ -40,7 +40,7 @@ Start collecting tweets:
 
 Delete one of your rules using an id from the the output of `list-rules`:
 
-    twarc2 remove-filter-rule <id>
+    twarc2 remove-filter-rule <rule-id>
 
 ### Sample
 
@@ -80,9 +80,17 @@ and get back information about whether the tweets are still available.
 Since this can take some time for large datasets the ids are first uploaded
 and then fetched.
 
+First upload a set of tweet ids to check:
+
     twarc2 add-compliance-job ids.txt
+
+List the current compliance jobs, including their id and their status:
+
     twarc2 list-compliance-jobs
-    twarc2 get-compliance-job id
+
+Download and output the results of a completed compliance job:
+
+    twarc2 get-compliance-job <job-id>
 
 ### Stitching
 
