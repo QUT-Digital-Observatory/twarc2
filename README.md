@@ -80,9 +80,9 @@ and get back information about whether the tweets are still available.
 Since this can take some time for large datasets the ids are first uploaded
 and then fetched.
 
-    twarc2 add-compliance ids.txt
-    twarc2 list-compliance
-    twarc2 get-compliance id
+    twarc2 add-compliance-job ids.txt
+    twarc2 list-compliance-jobs
+    twarc2 get-compliance-job id
 
 ### Stitching
 
