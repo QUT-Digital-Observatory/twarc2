@@ -14,7 +14,7 @@ command line API could look like.
 
 ### Search
 
-```shell
+```bash
 twarc2 search blacklivesmatter > tweets.jsonl
 ```
 
