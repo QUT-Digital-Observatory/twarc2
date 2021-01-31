@@ -12,7 +12,7 @@ fullest representation of tweets and Twitter users, with the minimum amount
 of fuss, and maximum amount of reliability. Here's a sketch of what the
 command line API could look like.
 
-## Search
+### Search
 
     twarc2 search blacklivesmatter > tweets.jsonl
 
@@ -20,7 +20,7 @@ If you have academic search turned on for your account:
 
     twarc2 search blacklivesmatter --all > tweets.jsonl
 
-## Filter
+### Filter
 
 The [filter] API works a bit different in v2 because you first create a set
 of rules (optionally tagged) and then you connect to the filter stream to
@@ -31,36 +31,36 @@ retrieve all the tweets that match those rules.
     twarc remove-rule 1
     twarc filter > tweets.jsonl
 
-## Sample
+### Sample
 
     twarc2 sample > tweets.jsonl
 
-## Followers
+### Followers
 
     twarc2 followers jack > users.jsonl
 
-## Following/Friends
+### Following/Friends
 
     twarc2 friends jack > users.jsonl
 
-## Users
+### Users
 
     twarc2 users ids.txt > users.jsonl
     twarc2 users usernames.txt > users.jsonl
 
-## Timeline
+### Timeline
 
     twarc timeline jack > tweets.jsonl
 
-## Mentions
+### Mentions
 
     twarc mentions jack > tweets.jsonl
 
-## Hydrate
+### Hydrate
 
     twarc hydrate ids.txt > tweets.jsonl
 
-## Compliance
+### Compliance
 
 The [compliance] API is new and allows users to upload tweet id datasets
 and get back information about whether the tweets are still available.
@@ -71,7 +71,7 @@ and then fetched.
     twarc list-compliance
     twarc get-compliance id
 
-## Stitching
+### Stitching
 
 The big difference with the v2 API is that some information (users, media,
 etc) is not included inline and can be included as a separate [extended
