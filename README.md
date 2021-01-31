@@ -26,10 +26,10 @@ The [filter] API works a bit different in v2 because you first create a set
 of rules (optionally tagged) and then you connect to the filter stream to
 retrieve all the tweets that match those rules.
 
-    twarc add-rule blacklivesmatter
-    twarc list-rules
-    twarc remove-rule 1
-    twarc filter > tweets.jsonl
+    twarc2 add-rule blacklivesmatter
+    twarc2 list-rules
+    twarc2 remove-rule 1
+    twarc2 filter > tweets.jsonl
 
 ### Sample
 
@@ -50,15 +50,15 @@ retrieve all the tweets that match those rules.
 
 ### Timeline
 
-    twarc timeline jack > tweets.jsonl
+    twarc2 timeline jack > tweets.jsonl
 
 ### Mentions
 
-    twarc mentions jack > tweets.jsonl
+    twarc2 mentions jack > tweets.jsonl
 
 ### Hydrate
 
-    twarc hydrate ids.txt > tweets.jsonl
+    twarc2 hydrate ids.txt > tweets.jsonl
 
 ### Compliance
 
@@ -67,9 +67,9 @@ and get back information about whether the tweets are still available.
 Since this can take some time for large datasets the ids are first uploaded
 and then fetched.
 
-    twarc add-compliance ids.txt
-    twarc list-compliance
-    twarc get-compliance id
+    twarc2 add-compliance ids.txt
+    twarc2 list-compliance
+    twarc2 get-compliance id
 
 ### Stitching
 
@@ -84,7 +84,7 @@ can use the `--stitch` option. Depending on your use case this could make
 downstream processing easier since it can expect each line to contain
 a tweet.
 
-    twarc search blacklivesmatter --stitch > tweets.jsonl
+    twarc2 search blacklivesmatter --stitch > tweets.jsonl
 
 [twarc]: https://github.com/docnow/twarc
 [substantially changed]: https://blog.twitter.com/developer/en_us/topics/tools/2020/introducing_new_twitter_api.html
