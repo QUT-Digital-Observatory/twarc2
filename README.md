@@ -1,11 +1,11 @@
 # twarc2
 
-twarc2 is a new version of [twarc] custom made for the new Twitter v2 API.
-Twitter [substantially changed] their API in July 2020. They have
-deprecated the v1.1 and premium endpoints. While some of the API calls seem
-similar the most significant change is the response payload with is
-[totally new]. The representation of a tweet now can take a very different
-shape depending on what you ask for and how you ask for it. 
+twarc2 is a *proposed* new version of [twarc] custom made for the new
+Twitter v2 API. Twitter [substantially changed] their API in July 2020.
+They have deprecated the v1.1 and premium endpoints. While some of the API
+calls seem similar the most significant change is the response payload with
+is [totally new]. The representation of a tweet now can take a very
+different shape depending on what you ask for and how you ask for it. 
 
 As with twarc the goal of twarc2 is to make it easy to continue to get the
 fullest representation of tweets and Twitter users, with the minimum amount
