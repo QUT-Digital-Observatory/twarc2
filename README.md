@@ -14,8 +14,8 @@ command line API could look like.
 
 ### Search
 
-```bash
-$ twarc2 search blacklivesmatter > tweets.jsonl
+```shell
+twarc2 search blacklivesmatter > tweets.jsonl
 ```
 
 If you have academic search turned on for your account:
@@ -32,50 +32,79 @@ retrieve all the tweets that match those rules.
 
 First you need to add a rule:
 
-    twarc2 add-filter-rule blacklivesmatter
+```shell
+twarc2 add-filter-rule blacklivesmatter
+```
 
 List your rules:
 
-    twarc2 list-filter-rules
+```shell
+twarc2 list-filter-rules
+```
 
 Start collecting tweets:
 
-    twarc2 filter > tweets.jsonl
+```
+twarc2 filter > tweets.jsonl
+```
 
 Delete one of your rules using an id from the the output of `list-rules`:
 
-    twarc2 remove-filter-rule <rule-id>
+```shell
+twarc2 remove-filter-rule <rule-id>
+```
 
 ### Sample
 
-    twarc2 sample > tweets.jsonl
+```shell
+twarc2 sample > tweets.jsonl
+```
 
 ### Followers
 
-    twarc2 followers jack > users.jsonl
+```shell
+twarc2 followers jack > users.jsonl
+```
 
 ### Following/Friends
 
-    twarc2 friends jack > users.jsonl
+```shell
+twarc2 friends jack > users.jsonl
+```
 
-*Question: is piping to `twarc2 users` desirable?*
+*Question: is being able to pipe to `twarc2 users` useful?*
 
 ### Users
 
-    twarc2 users ids.txt > users.jsonl
-    twarc2 users usernames.txt > users.jsonl
+Get users for user ids:
+
+```shell
+twarc2 users ids.txt > users.jsonl
+```
+
+Or get users for usernames:
+
+```shell
+twarc2 users usernames.txt > users.jsonl
+```
 
 ### Timeline
 
-    twarc2 timeline jack > tweets.jsonl
+```shell
+twarc2 timeline jack > tweets.jsonl
+```
 
 ### Mentions
 
-    twarc2 mentions jack > tweets.jsonl
+```shell
+twarc2 mentions jack > tweets.jsonl
+```
 
 ### Hydrate
 
-    twarc2 hydrate ids.txt > tweets.jsonl
+```shell
+twarc2 hydrate ids.txt > tweets.jsonl
+```
 
 ### Compliance
 
@@ -86,15 +115,21 @@ and then fetched.
 
 First upload a set of tweet ids to check:
 
-    twarc2 add-compliance-job ids.txt
+```shell
+twarc2 add-compliance-job ids.txt
+```
 
 List the current compliance jobs, including their id and their status:
 
-    twarc2 list-compliance-jobs
+```shell
+twarc2 list-compliance-jobs
+```
 
 Download and output the results of a completed compliance job:
 
-    twarc2 get-compliance-job <job-id>
+```shell
+twarc2 get-compliance-job <job-id>
+```
 
 ### Stitching
 
@@ -110,7 +145,9 @@ can use the `--stitch` option. Depending on your use case this could make
 downstream processing easier since it can expect each line to contain
 a complete tweet.
 
-    twarc2 search blacklivesmatter --stitch > tweets.jsonl
+```shell
+twarc2 search blacklivesmatter --stitch > tweets.jsonl
+```
 
 The proposed behavior is that this not be the default behavior, since twarc has been used in the past to display exactly what has been retrieved from the Twitter API.
 
