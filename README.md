@@ -28,11 +28,11 @@ retrieve all the tweets that match those rules.
 
 First you need to add a rule:
 
-    twarc2 add-rule blacklivesmatter
+    twarc2 add-filter-rule blacklivesmatter
 
 List your rules:
 
-    twarc2 list-rules
+    twarc2 list-filter-rules
 
 Start collecting tweets:
 
@@ -40,7 +40,7 @@ Start collecting tweets:
 
 Delete one of your rules using an id from the the output of `list-rules`:
 
-    twarc2 remove-rule <id>
+    twarc2 remove-filter-rule <id>
 
 ### Sample
 
